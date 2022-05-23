@@ -1,0 +1,39 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="комментарор" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="newssite.models.Comments.objects" />
+          <option value="newssite.models.News.objects" />
+          <option value="blogsite.models.Blog.*" />
+          <option value="django.db.models.fields.related.ForeignKey.username" />
+          <option value="Food.models.Account.objects" />
+          <option value="Food.models.Item.objects" />
+          <option value="Food.models.Shop.objects" />
+          <option value="Food.models.Cart.objects" />
+          <option value="random.random.randint" />
+          <option value="Blog.еуые.screen" />
+          <option value="Blog.еуые.keyboard" />
+          <option value="Blog.arkanoid.screen" />
+          <option value="Blog.arkanoid.keyboard" />
+          <option value="arkanoid.screen" />
+          <option value="candidates.models.Candidate.objects" />
+          <option value="candidates.models.Hobby.objects" />
+          <option value="candidates.models.Skill.objects" />
+          <option value="candidates.models.Language.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

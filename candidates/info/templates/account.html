@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Аккаунт</title>
+</head>
+<body>
+<h2> Данные вашего аккаунта </h2>
+
+<h2> ФИО: {{user.name}} {{user.lastname}} {{user.surname}} </h2>
+{% for tag in user.tag.all %}
+<h3>{{ tag.name }}:</h3>
+<div>{% for skill in user.skill.all%}
+    {% if tag == skill.tag %}
+    {{ skill.name }},
+    <form method="post" action="">
+        {% csrf_token %}
+        <button class="btn buy-btn" type="submit" name="delete" value={{skill.name}}> Удалить</button>
+    </form>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endfor %}
+
+
+
+<hr>
+{% if extra.count != 0 %}
+<h2> Выбрать навыки </h2>
+{% for tag in mylist %}
+<h3>{{ tag }}:</h3>
+
+{% for skill in extra%}
+{% if tag == skill.tag.name %}
+<div>{{ skill.name }},
+    <form method="post" action="">
+        {% csrf_token %}
+        <button class="btn buy-btn" type="submit" name="choice" value={{skill.name}},{{tag}}> Добавить</button>
+    </form>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endfor %}
+{% endif %}
+
+
+<h2> Добавить хобби </h2>
+<form method="post" action="">
+    {% csrf_token %}
+    {{form2.as_p}}
+    <button type="submit" name="add"> Добавить</button>
+
+</form>
+
+<hr>
+<a href="/main"> Назад </a>
+</body>
+</html>
